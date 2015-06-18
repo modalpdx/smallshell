@@ -10,7 +10,7 @@ program on your computer or one of the three built-in functions:
 
 - cd: Like the normal change-directory command on Linux, but without bells
   and whistles. If you just run 'cd' by itself it sends you to your home
-  directory. If you specify a path after 'cd' you will chance to that
+  directory. If you specify a path after 'cd' you will change to that
   directory, assuming it exists.
 
 - status: Displays the exit status code for the last command/program that
@@ -45,7 +45,7 @@ variants.
 
 This is code from a school project. It satisfies assignment requirements
 but is nowhere near as "scrubbed" as released software should be.
-Security is not addressed, only functionality and minimal input
+Security is not addressed, only functionality and no input
 validation. If you use this code for anything other than satisfying your
 curiosity, please keep the following in mind:
 
