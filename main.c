@@ -390,25 +390,25 @@ int main()
                       //
                       if(bg == 1)
                       {
-		                      // If we have no populated nodes, populate head. Otherwise,
-		                      // add a new node to the list. The fork() process returned
+                          // If we have no populated nodes, populate head. Otherwise,
+                          // add a new node to the list. The fork() process returned
                           // the child's PID to us (it's what got us here), so plug 
                           // that into a node in the linked list manually. This only 
                           // happens this way for the first node; subsequent nodes are 
                           // added via addNode().
                           //
-		                      if(numNodes == 0) {
+                          if(numNodes == 0) {
                               // Set up the initial head node
                               //
                               head = (struct Node *) malloc(sizeof(struct Node));
                               head->next = NULL;
-		                      	  head->pid = pid;
-		                      	  numNodes++;
-		                      } else {
-                              // Otherwise, add a new node to the linked list.
-		                      	  head = addNode(pid, head);
+                              head->pid = pid;
                               numNodes++;
-		                      }
+                          } else {
+                              // Otherwise, add a new node to the linked list.
+                              head = addNode(pid, head);
+                              numNodes++;
+                          }
                       }
                       else{
                           // We did not spawn a background process (those are all handled

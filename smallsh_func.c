@@ -100,19 +100,19 @@ struct Node *addNode(int newPid, struct Node *head) {
 
     // Set up a new node to add to the background PID node list.
     // 
-	  struct Node *newNode;      
-	  newNode = (struct Node *) malloc(sizeof(struct Node));
-	  newNode->pid = newPid;
+    struct Node *newNode;      
+    newNode = (struct Node *) malloc(sizeof(struct Node));
+    newNode->pid = newPid;
 
     // Add the new node to the head of the list for simplicity. (It's 
     // always harder adding nodes to the end of the list.)
     //
-	  newNode->next = head;
+    newNode->next = head;
 
     // Return the new node pointer. This value is used by the calling
     // function to let it know the new head of the list.
     //
-	  return newNode;
+    return newNode;
 
 }
 
@@ -129,8 +129,8 @@ struct Node *addNode(int newPid, struct Node *head) {
 struct Node *clearChildren(struct Node *head, int *numNodes) {
 
     int wpid;                 // PID returned by waitpid()
-	  struct Node *prev;        // Previous node in the linked list
-	  struct Node *curr;        // Current node in the linked list
+    struct Node *prev;        // Previous node in the linked list
+    struct Node *curr;        // Current node in the linked list
 
     prev = NULL;              // Start off at the beginning (no previous node)
     curr = head;              // Start at the head node
